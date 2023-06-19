@@ -27,7 +27,7 @@ const Home = () => {
                 backgroundColor: '#D22126',
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '16px ',
-                padding: '0.5rem o,5rem',
+                padding: '0.5rem 0.5rem',
                 margin: '24px 0px',
                 width: '368px',
                 height: '48px',
