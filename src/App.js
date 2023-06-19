@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import { Grid } from '@mui/material';
+import Navbar from './components/navbar/navbar';
+import Home from './components/home/home';
+import FinancialFreedom from './components/financial-freedom/financial-freedom';
+import Tracking from './components/tracking/tracking';
+import Testimonial from './components/testimonial/testimonial';
+
+const App=()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid >
+      <Navbar/>
+      <Home/>
+      <FinancialFreedom/>
+      <Tracking/>
+      <Testimonial/>
+    </Grid>
   );
 }
 

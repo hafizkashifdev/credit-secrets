@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <clipPath id="clip-Icon8">
+      <rect width="1080" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Icon8" clip-path="url(#clip-Icon8)">
+    <rect width="1080" height="1080" fill="#fff"/>
+    <g id="Icon7" transform="translate(58.602 73.489)">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="148.641" height="372.627" transform="translate(0 559.453)" fill="#ffbd59"/>
+      <path id="Path_67" data-name="Path 67" d="M246.476,436.272c114.884,0,208.016-93.132,208.016-208.016S361.36,20.24,246.476,20.24,38.46,113.372,38.46,228.256c.113,114.837,93.179,207.9,208.016,208.016ZM243.3,245.557h0c-44.633-4.4-79.542-38.7-79.542-80.258,0-39.924,32.349-73.092,74.525-79.439v-34.5h31.735v34.4c40.948,7.166,72.273,39.924,72.273,79.132H310.15c0-26.923-25.8-48.933-57.532-48.933s-57.43,22.01-57.43,48.933,25.695,48.933,57.43,48.933v.512c46.578,4.4,82.92,40.027,82.92,83.227a85.479,85.479,0,0,1-65.926,80.156v27.435H238.491V380.992c-48.728-2.355-87.629-38.8-87.629-83.432H182.6c0,28.664,27.333,52,60.91,52s61.422-23.34,61.422-52-28.049-52-61.627-52Z" transform="translate(324.544 141.198)" fill="#ffbd59"/>
+      <path id="Path_68" data-name="Path 68" d="M795.419,79.186a35.113,35.113,0,0,0-45.043-8.906L550.55,182.886l-1.331-2.252a70.431,70.431,0,0,1-61.422,35.42H242.109V184.32H487.8a38.7,38.7,0,1,0,0-77.392H290.223a184.267,184.267,0,0,1-84.251-20.474A135.845,135.845,0,0,0,143.424,71.1H20.58V287.714l341.1,81.9a72.888,72.888,0,0,0,55.28-9.009l369.351-230.23a35.216,35.216,0,0,0,9.111-51.185Z" transform="translate(159.387 560.935)" fill="#ffbd59"/>
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="31.735" height="99.299" transform="translate(562.831 0)" fill="#ffbd59"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="31.735" height="99.299" transform="matrix(0.71, -0.704, 0.704, 0.71, 303.318, 110.902)" fill="#ffbd59"/>
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="31.735" height="99.299" transform="translate(196.867 371.505) rotate(-89.32)" fill="#ffbd59"/>
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="99.299" height="31.735" transform="matrix(0.704, -0.71, 0.71, 0.704, 746.659, 159.188)" fill="#ffbd59"/>
+      <rect id="Rectangle_6" data-name="Rectangle 6" width="99.197" height="31.735" transform="matrix(1, -0.012, 0.012, 1, 845.833, 340.956)" fill="#ffbd59"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <defs>
+    <clipPath id="clip-Icon3">
+      <rect width="1080" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Icon3" clip-path="url(#clip-Icon3)">
+    <rect width="1080" height="1080" fill="#fff"/>
+    <g id="Layer_x0020_1" transform="translate(79.37 134.685)">
+      <path id="Path_18" data-name="Path 18" d="M476.149,232h63.066A27.572,27.572,0,0,1,566.9,259.688v426.08H450V256.611C450,242.767,462.306,232,476.149,232Z" transform="translate(242.327 124.861)" fill="#ffbd59" fill-rule="evenodd"/>
+      <path id="Path_19" data-name="Path 19" d="M466.365,333.84V643.017H351V330.763C351,301.537,466.365,292.308,466.365,333.84Z" transform="translate(189.046 164.536)" fill="none" stroke="#ffbd59" stroke-width="8" fill-rule="evenodd"/>
+      <path id="Path_20" data-name="Path 20" d="M366.365,326.915V645.321H251V326.915C251,305.38,366.365,296.151,366.365,326.915Z" transform="translate(135.226 165.308)" fill="#ffbd59" fill-rule="evenodd"/>
+      <path id="Path_21" data-name="Path 21" d="M267.365,343.646V635.9H152V345.184C152,322.111,267.365,314.42,267.365,343.646Z" transform="translate(81.945 174.726)" fill="#ffbd59" fill-rule="evenodd"/>
+      <path id="Path_22" data-name="Path 22" d="M166.365,432.376V592.349H51V430.838C51,397,166.365,389.307,166.365,432.376Z" transform="translate(27.587 216.742)" fill="none" stroke="#ffbd59" stroke-width="8" fill-rule="evenodd"/>
+      <path id="Path_23" data-name="Path 23" d="M566.9,243.037V696.8H450V239.96C450,204.582,566.9,198.429,566.9,243.037Z" transform="translate(242.327 113.825)" fill="#ffbd59" fill-rule="evenodd"/>
+      <path id="Path_24" data-name="Path 24" d="M506.206,450.691c-44.608-46.146-89.215-90.754-133.823-136.9L87.816,596.82c-26.149,24.611-112.288-52.3-81.524-83.063L375.459,149.2l149.2,155.358L720.015,109.212,661.563,47.684,921.518,0,864.605,258.417l-63.066-64.6L541.584,450.691C532.355,459.921,515.435,459.921,506.206,450.691Z" transform="translate(0)" fill="#ffbd59" stroke="#707070" stroke-width="1" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>
