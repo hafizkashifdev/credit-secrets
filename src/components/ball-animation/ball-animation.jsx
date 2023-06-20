@@ -6,7 +6,7 @@ const BallAnimation = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+    const colors = ["#FFC100", "#FF0066", "#1B1B1B", "#FCBC0F", "#F85F36"];
     const numBalls = 50;
     const balls = [];
 

@@ -11,6 +11,8 @@ import ActCard from './components/act-card/act-card';
 import Faq from './components/faq/faq';
 import GrantFunding from './components/grant-funding/grant-funding';
 import Footer from './components/footer/footer';
+import { Container } from "@mui/material";
+
 
 const App=()=> {
   return (

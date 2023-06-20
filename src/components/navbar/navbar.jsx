@@ -10,11 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 
 const Navbar = () => {
   const [navbarBackground, setNavbarBackground] = React.useState("transparent");
@@ -67,8 +63,8 @@ const Navbar = () => {
           >
             <Box
               sx={{
-                marginLeft: "17.6rem",
-                "@media (max-width: 1600px)": {
+                marginLeft: "12rem",
+                "@media (max-width: 1536px)": {
                   marginLeft: "1rem",
                 },
               }}
@@ -102,9 +98,10 @@ const Navbar = () => {
           </Box>
           <Box
             sx={{
-              display: { xs: "flex", lg: "none" },
+              display: { xs: "flex", sm: "none" },
               justifyContent: "flex-end",
-              marginRight: "80px",
+              marginRight: "20px",
+              p:5
             }}
           >
             <IconButton
@@ -124,18 +121,18 @@ const Navbar = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom", // Change from "top" to "bottom"
+                vertical: "bottom", 
                 horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top", // Change from "top" to "bottom"
+                vertical: "top", 
                 horizontal: "right",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", lg: "none", },
+                display: { xs: "block", sm: "none", },
               }}
             >
               <MenuItem onClick={handleCloseNavMenu} sx={{mr:10}}>
@@ -196,10 +193,10 @@ const Navbar = () => {
           </Box>
           <Box
             sx={{
-              display: { xs: "none", lg: "flex" },
-              marginRight: "18rem",
-              "@media (max-width: 1600px)": {
-                marginRight: "10rem",
+              display: { xs: "none", sm: "flex" },
+              marginRight: "12rem",
+              "@media (max-width: 1536px)": {
+                marginRight: "1rem",
               },
             }}
           >

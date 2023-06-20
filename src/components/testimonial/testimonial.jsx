@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Rating } from "@mui/material";
+import { Box, Grid, Typography, Rating, Container } from "@mui/material";
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import Divider from "@mui/material/Divider";
@@ -14,19 +14,21 @@ const YellowDivider = styled("div")({
 
 const Testimonial = () => {
   return (
+    
     <Grid container sx={{ mt: 20, backgroundColor: "#F3F4F6", }}>
       <Grid item xs={2} />
       <Grid container sx={{  backgroundColor: "#F3F4F6", p: 2,mt:15,mb:15 }}>
         <Grid item xs={2} />
         <Grid
           item
-          xs={8}
+          xs={12}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
+          <Container maxWidth="xl">
           <Grid container spacing={2} justifyContent="center">
             {testimonialData.map((item, index) => (
               <Grid key={index} item xs={12} sm={6} md={4} lg={4}>
@@ -99,12 +101,11 @@ const Testimonial = () => {
                 </Box>
               </Grid>
             ))}
-          </Grid>
+          </Grid></Container>
         </Grid>
-        <Grid item xs={2} />
       </Grid>
-      <Grid item xs={2} />
     </Grid>
+  
   );
 };
 
