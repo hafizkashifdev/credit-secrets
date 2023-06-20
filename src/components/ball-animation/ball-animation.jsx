@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Grid } from '@mui/material';
 import './ball-animation.scss';
 
 const BallAnimation = () => {
@@ -54,7 +55,7 @@ const BallAnimation = () => {
     };
   }, []);
 
-  return <div ref={containerRef} className="ball-animation-container" />;
+  return <Grid ref={containerRef} className="ball-animation-container" />;
 };
 
 export default BallAnimation;
