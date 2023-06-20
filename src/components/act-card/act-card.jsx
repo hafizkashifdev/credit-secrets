@@ -52,6 +52,9 @@ const ActCard = () => {
             color: 'white',
             // Center the button
             mx: 'auto',
+            "@media (max-width: 600px)": {
+              width:'100%'
+            },
           }}
         >
           GET STARTED FOR ONLY $9.97 A MONTH

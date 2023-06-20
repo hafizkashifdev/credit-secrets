@@ -23,8 +23,8 @@ const SampleCards = () => {
               margin: "0 0 8px",
               display: "flex",
               justifyContent: "center",
-              "@media (max-width: 600px)": {
-                fontSize: "2.5rem",
+              "@media (max-width: 625px)": {
+                fontSize: "2rem",
               },
             }}
           >

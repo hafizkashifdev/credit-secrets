@@ -10,7 +10,9 @@ const Tracking = () => {
     <>
     <Container maxWidth="xl"  >
       <Grid container  >
-        <Grid item xl={6} xs={12} sx={{ display: 'flex', flexDirection: 'column',mt:2, justifyContent:'center',}}>
+        <Grid item md={6} xs={12} sx={{ display: 'flex', flexDirection: 'column',mt:4, justifyContent:'center', "@media (max-width: 1200px)": {
+              mt:10
+              },}}>
           <Typography sx={{color:'black' ,fontSize:'3.5rem',lineHeight:'1.2',fontWeight:600, fontFamily: 'Poppins, sans-serif',margin:'0 0 8px',dispaly:'flex',justifyContent:'flex-end'}}>
           Tracking Grants Have Never Been Easier
           </Typography>
@@ -43,7 +45,12 @@ const Tracking = () => {
             GET STARTED 
           </Button>
         </Grid>
-        <Grid item xl={6} xs={12}sx={{mt:13, }}>
+        <Grid item md={6} xs={12}sx={{mt:13,
+         "@media (max-width: 900px)": {
+         p:5,
+         mt:-2,
+        pb:0
+        }, }}>
           <img src={trackingImg} alt="Logo" style={{ width:'100%' }} />
         </Grid>
     

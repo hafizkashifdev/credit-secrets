@@ -11,6 +11,8 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuItem from "@mui/material/MenuItem";
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [navbarBackground, setNavbarBackground] = React.useState("transparent");
@@ -100,7 +102,7 @@ const Navbar = () => {
             sx={{
               display: { xs: "flex", sm: "none" },
               justifyContent: "flex-end",
-              marginRight: "20px",
+              // marginRight: "20px",
               p:5
             }}
           >
@@ -138,7 +140,7 @@ const Navbar = () => {
               <MenuItem onClick={handleCloseNavMenu} sx={{mr:10}}>
                 <Typography textAlign="center">
                   <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <Button
+                  <Link to="/sign-in" replace={true}  style={{ textDecoration: 'none' }}>  <Button
                       color="inherit"
                       sx={{
                         borderRadius: "100px",
@@ -161,7 +163,9 @@ const Navbar = () => {
                       }}
                     >
                       Login
-                    </Button>
+                    </Button>            </Link>
+
+                    <Link to="/sign-up"  replace={true} style={{ textDecoration: 'none' }}> 
                     <Button
                       color="inherit"
                       sx={{
@@ -185,7 +189,7 @@ const Navbar = () => {
                       }}
                     >
                       Register Now
-                    </Button>
+                    </Button>  </Link>
                   </Box>
                 </Typography>
               </MenuItem>
@@ -200,6 +204,7 @@ const Navbar = () => {
               },
             }}
           >
+             <Link to="/sign-in" replace={true} style={{ textDecoration: 'none' }}> 
             <Button
               color="inherit"
               sx={{
@@ -224,7 +229,8 @@ const Navbar = () => {
               }}
             >
               Login
-            </Button>
+            </Button>    </Link>
+            <Link to="/sign-up"  replace={true} style={{ textDecoration: 'none' }}> 
             <Button
               color="inherit"
               sx={{
@@ -248,6 +254,7 @@ const Navbar = () => {
             >
               Register Now
             </Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>

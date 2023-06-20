@@ -1,33 +1,19 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignUp from './components/auth/sign-up/sign-up';
+import SignInComponent from './pages/sign-in-component';
+import HomeComponent from './pages/home-component';
 
-import './App.css';
-import { Grid } from '@mui/material';
-import Navbar from './components/navbar/navbar';
-import Home from './components/home/home';
-import FinancialFreedom from './components/financial-freedom/financial-freedom';
-import Tracking from './components/tracking/tracking';
-import Testimonial from './components/testimonial/testimonial';
-import SampleCards from './components/sample-cards/sample-cards';
-import ActCard from './components/act-card/act-card';
-import Faq from './components/faq/faq';
-import GrantFunding from './components/grant-funding/grant-funding';
-import Footer from './components/footer/footer';
-import { Container } from "@mui/material";
-
-
-const App=()=> {
+const App = () => {
   return (
-    <Grid >
-      <Navbar/>
-      <Home/>
-      <FinancialFreedom/>
-      <Tracking/>
-      <Testimonial/>
-      <SampleCards/>
-      <ActCard/>
-      <Faq/>
-      <GrantFunding/>
-      <Footer/>
-    </Grid>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeComponent />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-in" element={<SignInComponent />} />
+      </Routes>
+      {/* <Footer /> */}
+    </Router>
   );
 }
 

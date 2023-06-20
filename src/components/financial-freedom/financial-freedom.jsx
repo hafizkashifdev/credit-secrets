@@ -10,10 +10,14 @@ const FinancialFreedom = () => {
       <Grid item xs={2} />
       <Grid item xs={8} sx={{ mt: 10, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <Typography sx={{ color: '#D22126', fontSize: '3rem', lineHeight: '1.2', fontWeight: 600, fontFamily: 'Poppins, sans-serif', margin: '0 0 8px', display: 'flex', justifyContent: 'center' }}>TOTAL FINANCIAL FREEDOM</Typography>
-        <Typography sx={{ color: '#1F2937', fontSize: '3.5rem', lineHeight: '1.2', fontWeight: 600, fontFamily: 'Poppins, sans-serif', margin: '0 0 8px', display: 'flex', justifyContent: 'center' }}>
+        <Typography sx={{ color: '#1F2937', fontSize: '3.5rem', lineHeight: '1.2', fontWeight: 600, fontFamily: 'Poppins, sans-serif', margin: '0 0 8px', display: 'flex', justifyContent: 'center', "@media (max-width: 625px)": {
+                fontSize: "2.2rem",
+              }, }}>
           Comprehensive Solution For Individuals &
         </Typography>
-        <Typography sx={{ color: '#1F2937', fontSize: '3.5rem', lineHeight: '1.2', fontWeight: 600, fontFamily: 'Poppins, sans-serif', margin: '0 0 8px', display: 'flex', justifyContent: 'center' }}> Businesses Seeking Funding</Typography>
+        <Typography sx={{ color: '#1F2937', fontSize: '3.5rem', lineHeight: '1.2', fontWeight: 600, fontFamily: 'Poppins, sans-serif', margin: '0 0 8px', display: 'flex', justifyContent: 'center', "@media (max-width: 625px)": {
+                fontSize: "2rem",
+              }, }}> Businesses Seeking Funding</Typography>
       </Grid>
       <Grid item xs={2} />
 
