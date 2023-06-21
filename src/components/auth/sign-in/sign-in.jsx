@@ -224,7 +224,7 @@ const SignIn = () => {
                 {/* Not a member? Signup */}
                 <Grid item xs={12}>
                   <Typography variant="body2" align="start">
-                    Not a member? <Link to="/sign-up" replace={true}><span style={{ color: '#F0CF42', cursor: 'pointer' }}>Signup for an account now.</span></Link>
+                    Not a member? <Link to="/sign-up" replace={true}><span style={{ color: 'black', cursor: 'pointer' ,fontWeight:600}}>Signup for an account now.</span></Link>
                   </Typography>
                 </Grid>
               </Grid>

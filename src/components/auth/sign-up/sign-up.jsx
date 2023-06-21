@@ -1,12 +1,13 @@
-import React from 'react';
-import { Grid, TextField, Button, Typography ,Divider} from '@mui/material';
+import React, { useState } from "react";
+import { Grid, TextField, Button, Typography ,Divider,IconButton,} from '@mui/material';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 
 import { makeStyles } from '@mui/styles';
 import authlogoImg from "../../../assects/images/logo.png";
-import { Circle } from "@mui/icons-material";
+import { Circle, Visibility, VisibilityOff, Email, Error, } from "@mui/icons-material";
+import PersonIcon from '@mui/icons-material/Person';
 
 import dashboardImg from '../../../assects/images/tracking=img.png';
 
@@ -20,6 +21,8 @@ const useStyles = makeStyles({
 
 const SignUp = () => {
   const classes = useStyles();
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(false);
 
   // Define validation schema using Yup
   const validationSchema = Yup.object({
@@ -38,7 +41,9 @@ const handleSubmit = (values, { setSubmitting, resetForm }) => {
     setSubmitting(false);
   }, 400);
 };
-
+const togglePasswordVisibility = () => {
+  setShowPassword(prevShowPassword => !prevShowPassword);
+};
 
   return (
     <Grid container spacing={2}>
@@ -119,6 +124,13 @@ const handleSubmit = (values, { setSubmitting, resetForm }) => {
                         color: "black",
                       },
                     }}
+                    InputProps={{
+                      endAdornment: (
+                        <IconButton disabled>
+                        <PersonIcon/>
+                      </IconButton>
+                      ),
+                    }}
                   />
                 </Grid>
 
@@ -140,6 +152,13 @@ const handleSubmit = (values, { setSubmitting, resetForm }) => {
                         color: "black",
                       },
                     }}
+                    InputProps={{
+                      endAdornment: (
+                        <IconButton disabled >
+                        <PersonIcon/>
+                      </IconButton>
+                      ),
+                    }}
                   />
                 </Grid>
 
@@ -153,6 +172,13 @@ const handleSubmit = (values, { setSubmitting, resetForm }) => {
                     fullWidth
                     error={touched.email && !!errors.email}
                     helperText={touched.email && errors.email}
+                    InputProps={{
+                      endAdornment: (
+                        <IconButton disabled>
+                          <Email />
+                        </IconButton>
+                      ),
+                    }}
                     sx={{
                       "& .MuiInputBase-root": {
                         backgroundColor: "white",
@@ -166,25 +192,32 @@ const handleSubmit = (values, { setSubmitting, resetForm }) => {
 
                 {/* Password */}
                 <Grid item xs={12}>
-                  <Typography variant="body1" sx={{ fontFamily: "Poppins, sans-serif",
-                      fontSize: "1rem",}}>Password:</Typography>
-                  <Field
-                    name="password"
-                    type="password"
-                    as={TextField}
-                    fullWidth
-                    error={touched.password && !!errors.password}
-                    helperText={touched.password && errors.password}
-                    sx={{
-                      "& .MuiInputBase-root": {
-                        backgroundColor: "white",
-                      },
-                      "& .Mui-focused": {
-                        color: "black",
-                      },
-                    }}
-                  />
-                </Grid>
+  <Typography variant="body1" sx={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }}>Password:</Typography>
+  <Field
+    name="password"
+    type={showPassword ? 'text' : 'password'}
+    as={TextField}
+    fullWidth
+    error={touched.password && !!errors.password}
+    helperText={touched.password && errors.password}
+    InputProps={{
+      endAdornment: (
+        <IconButton onClick={togglePasswordVisibility}>
+          {showPassword ? <VisibilityOff /> : <Visibility />}
+        </IconButton>
+      ),
+    }}
+    sx={{
+      "& .MuiInputBase-root": {
+        backgroundColor: "white",
+      },
+      "& .Mui-focused": {
+        color: "black",
+      },
+    }}
+  />
+</Grid>
+
 
                
                 <Grid item xs={12}>

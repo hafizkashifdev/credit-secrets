@@ -127,7 +127,7 @@ const ForgotPassword = () => {
                     }}
                     InputProps={{
                       endAdornment: (
-                        <IconButton disabled>
+                        <IconButton >
                           <Email />
                         </IconButton>
                       ),
