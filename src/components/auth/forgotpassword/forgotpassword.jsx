@@ -5,9 +5,8 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { makeStyles } from '@mui/styles';
 import { Circle, Visibility, VisibilityOff, Email, Error } from "@mui/icons-material";
-import authlogoImg from "../../../assects/images/logo.png";
-import dashboardImg from '../../../assects/images/tracking=img.png';
-import './sign-in.scss';
+import fauthlogoImg from "../../../assects/images/logo.png";
+import rDashboardImg from '../../../assects/images/heroimg.png';
 
 const useStyles = makeStyles({
   logo: {
@@ -17,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 
-const SignIn = () => {
+const ForgotPassword = () => {
   const classes = useStyles();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -26,34 +25,16 @@ const SignIn = () => {
   // Define validation schema using Yup
   const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email address').required('Email is required'),
-    password: Yup.string().required('Password is required').min(6, 'Password must be at least 6 characters'),
   });
 
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    setSubmitting(true);
-    setTimeout(() => {
-      if (values.email === 'admin@123.com' && values.password === '801@2523') {
-        // Successful login, navigate to the dashboard
-        console.log('Login successful');
-        navigate('/dashboard'); // Navigate to the dashboard
-      } else {
-        // Password doesn't match, show error message
-        setError(true);
-      }
-      resetForm();
-      setSubmitting(false);
-    }, 400);
-  };
-
-  const togglePasswordVisibility = () => {
-    setShowPassword((prevShowPassword) => !prevShowPassword);
-  };
+  
+ 
 
   return (
     <Grid container spacing={2}>
       {/* Logo */}
       <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'center', mt: 15, pl: 10, pr: 10, mb: 15 }}>
-        <img src={dashboardImg} alt="Signup" width={"100%"} style={{ padding: '30px' }} />
+        <img src={rDashboardImg} alt="Signup" width={"100%"} style={{ padding: '30px' }} />
       </Grid>
 
       {/* Signin Form Grid */}
@@ -74,7 +55,7 @@ const SignIn = () => {
             }}
           >
             <img
-              src={authlogoImg}
+              src={fauthlogoImg}
               alt="Logo"
               style={{ marginRight: "8px", width: "60px", height: "60px" }}
             />
@@ -92,7 +73,7 @@ const SignIn = () => {
             rememberMe: false,
           }}
           validationSchema={validationSchema}
-          onSubmit={handleSubmit}
+        //   onSubmit={handleSubmit}
         >
           {({ touched, errors, isSubmitting }) => (
             <Form>
@@ -107,18 +88,25 @@ const SignIn = () => {
                       cursor: 'pointer',
                     }}
                   >
-                    Sign in
+                  Forgot Password
                   </Typography>
                 </Grid>
 
-                {error && (
-                  <Grid item xs={12}>
-                    <Typography variant="body2" color="error" sx={{ display: "flex", alignItems: "center" }}>
-                      <Error sx={{ fontSize: "1rem", marginRight: "4px" }} />
-                      Invalid email or password
-                    </Typography>
-                  </Grid>
-                )}
+                <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+  <Typography
+    variant="h6"
+    style={{
+      fontFamily: 'Poppins, sans-serif',
+      fontSize: '1rem',
+      color: '#000000',
+      fontWeight:600,
+    }}
+  >
+    Enter your registered email address
+  </Typography>
+</Grid>
+
+
 
                 {/* Email */}
                 <Grid item xs={12}>
@@ -147,55 +135,6 @@ const SignIn = () => {
                   />
                 </Grid>
 
-                {/* Password */}
-                <Grid item xs={12}>
-                  <Typography variant="body1" sx={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }}>Password:</Typography>
-                  <Field
-                    name="password"
-                    type={showPassword ? 'text' : 'password'}
-                    as={TextField}
-                    fullWidth
-                    error={touched.password && !!errors.password}
-                    helperText={touched.password && errors.password}
-                    sx={{
-                      "& .MuiInputBase-root": {
-                        backgroundColor: "white",
-                      },
-                      "& .Mui-focused": {
-                        color: "black",
-                      },
-                    }}
-                    InputProps={{
-                      endAdornment: (
-                        <IconButton onClick={togglePasswordVisibility}>
-                          {showPassword ? <VisibilityOff /> : <Visibility />}
-                        </IconButton>
-                      ),
-                    }}
-                  />
-                </Grid>
-
-                {/* Remember Me & Forgot Password */}
-                <Grid item xs={12} container justifyContent="space-between" alignItems="center">
-                  <Grid item xs={6} container alignItems="center">
-                    <Field
-                      as={Checkbox}
-                      id="rememberMe"
-                      name="rememberMe"
-                      color="primary"
-                    />
-                    <label htmlFor="rememberMe" style={{ fontFamily: "Poppins, sans-serif" }}>
-                      Remember me
-                    </label>
-                  </Grid>
-                  <Grid item xs={6} container justifyContent="flex-end">
-                    <Link to="/sign-in" replace={true} variant="body2" color="textSecondary" sx={{ color: '#F0CF42', cursor: 'pointer' }}>
-                      Forgot Password?
-                    </Link>
-                  </Grid>
-                </Grid>
-
-                {/* Sign In Button */}
                 <Grid item xs={12}>
                   <Button
                     type="submit"
@@ -203,28 +142,23 @@ const SignIn = () => {
                     disabled={isSubmitting}
                     fullWidth
                     sx={{
-                      color: '#FFFFFF',
-                      backgroundColor: '#29A743',
-                      textTransform: 'capitalize',
+                        color: '#FFFFFF',
+                        backgroundColor: '#29A743',
+                        textTransform: 'capitalize',
                       fontFamily: "Poppins, sans-serif",
                       "&:hover": {
                         backgroundColor: "#000000",
                       },
                     }}
                   >
-                    {isSubmitting ? "Signing in..." : "Sign In"}
+                   Reset Password
                   </Button>
-                </Grid>
-
-                {/* Divider */}
-                <Grid item xs={12}>
-                  <Divider />
                 </Grid>
 
                 {/* Not a member? Signup */}
                 <Grid item xs={12}>
                   <Typography variant="body2" align="start">
-                    Not a member? <Link to="/sign-up" replace={true}><span style={{ color: '#F0CF42', cursor: 'pointer' }}>Signup for an account now.</span></Link>
+                    Not a member? <Link to="/sign-up" replace={true}><span style={{ color: '#F38B98', cursor: 'pointer' }}>Signup for an account now.</span></Link>
                   </Typography>
                 </Grid>
               </Grid>
@@ -236,4 +170,5 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default ForgotPassword
+
