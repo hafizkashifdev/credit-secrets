@@ -224,10 +224,16 @@ const togglePasswordVisibility = () => {
                   <Button
                     type="submit"
                     variant="contained"
+                    fullWidth
                     sx={{
                       color: '#FFFFFF',
+                      mt:1,
                       backgroundColor: '#29A743',
                       textTransform: 'capitalize',
+                      fontFamily: "Poppins, sans-serif",
+                      "&:hover": {
+                        backgroundColor: "#000000",
+                      },
                     }}
                   >
                     Sign Up
