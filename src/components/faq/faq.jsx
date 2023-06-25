@@ -81,7 +81,7 @@ const Faq = () => {
                 )}
               </Grid>
               {openQuestionIndex === index && (
-                <Grid item xs={12} sx={{  color: '#1F2937', fontSize: '1rem', fontFamily: 'Poppins, sans-serif',padding:'0px 128px 0px 0px '}}>
+                <Grid item xs={12} sx={{  color: '#1F2937', fontSize: '1rem', fontFamily: 'Poppins, sans-serif',padding:{xl: '0px 128px 0px 0px ',md:'0'}}}>
                   <Typography variant="body1">{item.answer}</Typography>
                 </Grid>
               )}

@@ -48,13 +48,13 @@ const togglePasswordVisibility = () => {
   return (
     <Grid container spacing={2}>
       {/* Logo */}
-      <Grid item xs={6}  sx={{display:'flex',justifyContent:'center',mt:15,pl:10,pr:10,mb:15}}>
-        <img src={dashboardImg} alt="Signup" width={"100%"} style={{padding:'30px'}}/>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={6} sx={{ display: {xl:'flex',xs:'none'}, justifyContent: 'center', mt: 15, pl: 10, pr: 10, mb: 15 }}>
+        <img src={dashboardImg} alt="Signup" width={"100%"} style={{ padding: '30px' }} />
       </Grid>
-
-      {/* Signup Form Grid */}
-      <Grid item xs={6} sm={6} sx={{ backgroundColor: '#E1FEFF',pb:39,pt:5 }}>
-        <Grid item xs={12} sx={{ pl: 20, mt: 5,}}>
+  
+      {/* Signin Form Grid */}
+      <Grid item xs={12} sm={12} md={12} lg={12} xl={6} sx={{ backgroundColor: '#E1FEFF' }}>
+        <Grid item xs={12} sx={{ pl:{xl:19,xs:4} , mt: 5 }}>
           <Typography
             variant="h6"
             sx={{
@@ -94,13 +94,14 @@ const togglePasswordVisibility = () => {
 
           {({ touched, errors }) => (
             <Form>
-              <Grid container spacing={2} sx={{ pl: 20,pr:20,mt:5 }}>
-                <Grid xs={12} sx={{ p: 2 }}>
+               <Grid container spacing={2} sx={{ pl: {xl:20,xs:4}, pr:{xl: 20,xs:4}, mt: 4, pb: 44 }}>
+                <Grid item xs={12}>
                   <Typography
                     sx={{
                       fontFamily: "Poppins, sans-serif",
                       fontSize: "2rem",
-                      color: "#D22126",
+                      color: "#00000",
+                      fontWeight:600
                     }}
                   >
                     Sign Up

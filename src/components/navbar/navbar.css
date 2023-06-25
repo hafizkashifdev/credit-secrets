@@ -1,0 +1,17 @@
+.btn.btn-danger.nav-btn:hover {
+    background-color: #eec932 !important;
+    border-color: #eec932 !important;
+
+
+  }
+  ..btn.btn-danger{
+    outlineColor: '#D22126';
+    borderColor: '#D22126',
+  }
+
+  .navbar {
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px); /* For Safari */
+  }
+  

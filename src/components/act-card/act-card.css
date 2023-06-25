@@ -1,0 +1,62 @@
+.act-card-container {
+    background-color: #FFBD59;
+    padding-bottom:100px !important;
+    margin-top:110px !important;
+    padding-top:100px !important;
+   
+  }
+  
+  .act-card-title {
+    color: #D22126;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .act-card-description {
+    color: #FFFFFF;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .act-card-btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom:20px;
+    
+  }
+  
+  .act-card-btn button {
+    border-radius: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    width: 368px;
+    background-color:'#FFFFFF';
+    height: 48px;
+    
+  }
+  .act-card-btn button:hover {
+    background-color:'#FFFFFF'
+    
+  }
+  
+  @media (max-width: 600px) {
+    .act-card-title {
+      font-size: 1.5rem;
+    }
+  
+    .act-card-description {
+      font-size: 1rem;
+    }
+  
+    .act-card-btn button {
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+  .btn {
+    outline: none !important;
+}
+  

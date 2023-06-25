@@ -1,0 +1,66 @@
+.grant-fund-container {
+    background-color: #D22126;
+    padding-bottom:100px !important;
+    /* margin-top:110px !important; */
+    padding-top:100px !important;
+  }
+  
+  .grant-fund-title {
+    color: #D22126;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .grant-fund-description {
+    color: #FFFFFF;
+    font-size: 4.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .grant-fund-btn {
+    display: flex;
+    justify-content: center;
+    text-decoration: none !important;
+
+    
+  }
+  
+  .grant-fund-btn button {
+    background-color:#FFBD59;
+    border-radius: 100px;
+    width:166px;
+    height:58px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    text-decoration: none !important;
+  }
+  .grant-fund-btn button:hover{
+    background-color:#FFFFFF;
+    color:#D22126;
+   
+  }
+  
+  @media (max-width: 600px) {
+   
+    .grant-fund-description {
+      font-size: 2rem;
+      mt:-5px;
+    }
+  
+    .grant-fund-btn button {
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+  a.download-btn {
+    text-decoration: none;
+}
+
+.btn-danger:hover {
+  color:#D22126 !important;
+  background-color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}

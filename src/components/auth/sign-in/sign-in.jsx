@@ -52,13 +52,13 @@ const SignIn = () => {
   return (
     <Grid container spacing={2}>
       {/* Logo */}
-      <Grid item xs={6} sx={{ display: 'flex', justifyContent: 'center', mt: 15, pl: 10, pr: 10, mb: 15 }}>
+      <Grid item xs={12} sm={6} md={6} lg={6} xl={6} sx={{ display: {xl:'flex',xs:'none'}, justifyContent: 'center', mt: 15, pl: 10, pr: 10, mb: 15 }}>
         <img src={dashboardImg} alt="Signup" width={"100%"} style={{ padding: '30px' }} />
       </Grid>
-
+  
       {/* Signin Form Grid */}
-      <Grid item xs={6} sm={6} sx={{ backgroundColor: '#E1FEFF' }}>
-        <Grid item xs={12} sx={{ pl: 20, mt: 5 }}>
+      <Grid item xs={12} sm={12} md={12} lg={12} xl={6} sx={{ backgroundColor: '#E1FEFF' }}>
+        <Grid item xs={12} sx={{ pl:{xl:19,xs:4} , mt: 5 }}>
           <Typography
             variant="h6"
             sx={{
@@ -84,7 +84,7 @@ const SignIn = () => {
             </span>
           </Typography>
         </Grid>
-
+  
         <Formik
           initialValues={{
             email: "",
@@ -96,21 +96,22 @@ const SignIn = () => {
         >
           {({ touched, errors, isSubmitting }) => (
             <Form>
-              <Grid container spacing={2} sx={{ pl: 20, pr: 20, mt: 4, pb: 44 }}>
+              <Grid container spacing={2} sx={{ pl: {xl:20,xs:4}, pr:{xl: 20,xs:4}, mt: 4, pb: 44 }}>
                 <Grid item xs={12}>
                   <Typography
                     variant="h6"
                     style={{
                       fontFamily: 'Poppins, sans-serif',
-                      fontSize: '3rem',
+                      fontSize: '2rem',
                       color: '#000000',
                       cursor: 'pointer',
+                      fontWeight:600
                     }}
                   >
                     Sign in
                   </Typography>
                 </Grid>
-
+  
                 {error && (
                   <Grid item xs={12}>
                     <Typography variant="body2" color="error" sx={{ display: "flex", alignItems: "center" }}>
@@ -119,7 +120,7 @@ const SignIn = () => {
                     </Typography>
                   </Grid>
                 )}
-
+  
                 {/* Email */}
                 <Grid item xs={12}>
                   <Typography variant="body1" sx={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }}>Email:</Typography>
@@ -146,7 +147,7 @@ const SignIn = () => {
                     }}
                   />
                 </Grid>
-
+  
                 {/* Password */}
                 <Grid item xs={12}>
                   <Typography variant="body1" sx={{ fontFamily: "Poppins, sans-serif", fontSize: "1rem" }}>Password:</Typography>
@@ -174,7 +175,7 @@ const SignIn = () => {
                     }}
                   />
                 </Grid>
-
+  
                 {/* Remember Me & Forgot Password */}
                 <Grid item xs={12} container justifyContent="space-between" alignItems="center">
                   <Grid item xs={6} container alignItems="center">
@@ -183,18 +184,19 @@ const SignIn = () => {
                       id="rememberMe"
                       name="rememberMe"
                       color="primary"
+                      sx={{}}
                     />
                     <label htmlFor="rememberMe" style={{ fontFamily: "Poppins, sans-serif" }}>
                       Remember me
                     </label>
                   </Grid>
                   <Grid item xs={6} container justifyContent="flex-end">
-                    <Link to="/sign-in" replace={true} variant="body2" color="textSecondary" sx={{ color: '#F0CF42', cursor: 'pointer' }}>
+                    {/* <Link to="/sign-in" replace={true} variant="body2" color="textSecondary" sx={{ color: '#F0CF42', cursor: 'pointer' }}>
                       Forgot Password?
-                    </Link>
+                    </Link> */}
                   </Grid>
                 </Grid>
-
+  
                 {/* Sign In Button */}
                 <Grid item xs={12}>
                   <Button
@@ -215,16 +217,16 @@ const SignIn = () => {
                     {isSubmitting ? "Signing in..." : "Sign In"}
                   </Button>
                 </Grid>
-
+  
                 {/* Divider */}
                 <Grid item xs={12}>
                   <Divider />
                 </Grid>
-
+  
                 {/* Not a member? Signup */}
                 <Grid item xs={12}>
                   <Typography variant="body2" align="start">
-                    Not a member? <Link to="/sign-up" replace={true}><span style={{ color: 'black', cursor: 'pointer' ,fontWeight:600}}>Signup for an account now.</span></Link>
+                    Not a member? <Link to="/sign-up" replace={true}><span style={{ color: 'black', cursor: 'pointer', fontWeight: 600 }}>Signup for an account now.</span></Link>
                   </Typography>
                 </Grid>
               </Grid>
@@ -234,6 +236,7 @@ const SignIn = () => {
       </Grid>
     </Grid>
   );
+  
 };
 
 export default SignIn;

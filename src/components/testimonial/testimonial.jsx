@@ -1,7 +1,6 @@
-import { Box, Grid, Typography, Rating, Container } from "@mui/material";
+import { Box, Typography, Rating } from "@mui/material";
 import React from "react";
 import Avatar from "@mui/material/Avatar";
-import Divider from "@mui/material/Divider";
 import { styled } from "@mui/system";
 import testimonialData from "./testimonial-data";
 
@@ -14,98 +13,70 @@ const YellowDivider = styled("div")({
 
 const Testimonial = () => {
   return (
-    
-    <Grid container sx={{ mt: 20, backgroundColor: "#F3F4F6", }}>
-      <Grid item xs={2} />
-      <Grid container sx={{  backgroundColor: "#F3F4F6", p: 2,mt:15,mb:15 }}>
-        <Grid item xs={2} />
-        <Grid
-          item
-          xs={12}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Container maxWidth="xl">
-          <Grid container spacing={2} justifyContent="center">
-            {testimonialData.map((item, index) => (
-              <Grid key={index} item xs={12} sm={6} md={4} lg={4}>
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: "#ffffff",
-                    display: "flex",
-                    flexDirection: "column",
-                    paddjustifyContent: "center",
-                    alignItems: "center",
-                    borderRadius: "1rem",
+    <div className="" style={{ backgroundColor: "#F3F4F6" }}>
+      <div className="container" style={{paddingTop:'200px',paddingBottom:'200px'}}>
+        <div className="row">
+          {testimonialData.map((item, index) => (
+            <div
+              key={index}
+              className="col-12 col-sm-6 col-md-4 col-lg-4"
+              style={{ marginBottom: "15px" }}
+            >
+              <div
+                className="d-flex flex-column align-items-center justify-content-center"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "#ffffff",
+                  borderRadius: "1rem",
+                  padding: "1rem",
+                }}
+              >
+                <div className="d-flex align-items-center justify-content-center mb-3">
+                  <Avatar
+                    alt={`avator-${index}`}
+                    src={item.avator}
+                    sx={{ width: 96, height: 96, mt: 1 }}
+                  />
+                </div>
+                <Typography
+                  variant="h5"
+                  className="text-center mb-1"
+                  style={{
+                    color: "#1F2937",
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    fontFamily: "Poppins, sans-serif",
                   }}
                 >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    <Avatar
-                      alt={`avator-${index}`}
-                      src={item.avator}
-                      sx={{ width: 96, height: 96, mt: 1 }}
-                    />
-                  </Box>
+                  {item.title}
+                </Typography>
+                <YellowDivider />
+                <div className="d-flex justify-content-between align-items-center">
                   <Typography
-                    sx={{
-                      color: "#1F2937",
-                      fontSize: "1.25rem",
-                      padding: "1rem",
-                      fontWeight: 600,
+                    className="flex-grow-1"
+                    style={{
+                      color: "#4B5563",
+                      fontSize: "1rem",
                       fontFamily: "Poppins, sans-serif",
-                      textAlign: "center",
                     }}
                   >
-                    {item.title}
+                    {item.description}
                   </Typography>
-                  <YellowDivider />
-                  <Box
-                    sx={{
-                      display: "flex",
-                      width:'100%',
-                      justifyContent: "space-between",
-                      padding: "1rem",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        color: "#4B5563",
-                        fontSize: "1rem",
-                        fontFamily: "Poppins, sans-serif",
-                        ml:1
-                        // justifyContent: "flex-start",
-                      }}
-                    >
-                      {item.description}
-                    </Typography>
-                    <Rating
-                      name="star-rating"
-                      value={5}
-                      precision={0.5}
-                      readOnly
-                      sx={{ color: "#FFC107",mr:1 }}
-                    />
-                  </Box>
-                </Box>
-              </Grid>
-            ))}
-          </Grid></Container>
-        </Grid>
-      </Grid>
-    </Grid>
-  
+                  <Rating
+                    name={`star-rating-${index}`}
+                    value={5}
+                    precision={0.5}
+                    readOnly
+                    style={{ color: "#FFC107" }}
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
