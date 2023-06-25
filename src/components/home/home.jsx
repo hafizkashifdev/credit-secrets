@@ -1,8 +1,8 @@
 import React from "react";
-import { Typography, Button, Grid, Box, Container } from "@mui/material";
-import heroimg from "../../assects/images/heroimg.png";
+// import { Typography, Button, Grid, Box, Container } from "@mui/material";
+// import heroimg from "../../assects/images/heroimg.png";
 import "./home.scss";
-import BallAnimation from "../ball-animation/ball-animation";
+// import BallAnimation from "../ball-animation/ball-animation";
 import FinancialFreedom from "../financial-freedom/financial-freedom";
 import Tracking from "../tracking/tracking";
 import Testimonial from "../testimonial/testimonial";
