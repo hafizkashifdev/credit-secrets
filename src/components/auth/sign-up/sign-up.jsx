@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import { makeStyles } from '@mui/styles';
 import authlogoImg from "../../../assects/images/logo.png";
-import { Circle, Visibility, VisibilityOff, Email, Error, } from "@mui/icons-material";
+import { Circle, Visibility, VisibilityOff, Email,  } from "@mui/icons-material";
 import PersonIcon from '@mui/icons-material/Person';
 
 import dashboardImg from '../../../assects/images/tracking=img.png';
@@ -20,9 +20,9 @@ const useStyles = makeStyles({
 });
 
 const SignUp = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
 
   // Define validation schema using Yup
   const validationSchema = Yup.object({
